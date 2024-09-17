@@ -15,8 +15,10 @@ data characters;
   input Name;
   Spared = rand("Bernoulli", 0.5);
   x+1;
-  if x > 10 then
-    do; y+1; x = 1;end;
+  if x > 10 then do; 
+	y+1; 
+	x = 1;
+	end;
 /* Character data from IMDB.com for Avengers: Infinity War */
 datalines;
 Tony Stark / Iron Man
@@ -169,3 +171,5 @@ proc report data=Characters nowd;
   endcomp;
 run;
 title;
+
+/* This is the first change in the sas file */
